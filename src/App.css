@@ -433,8 +433,9 @@ header {
 }
 .movie__price--normal {
   color:#bfbfbf;
-  padding-right:6px;
-  text-decoration:line-through
+  padding-right: 6px;
+  text-decoration: line-through;
+  padding-right: 18px;
 }
 #explore {
   background-color:#7342d61a
@@ -594,6 +595,23 @@ select {
   font-size:16px;
   margin:8px 0 24px;
 }
+
+.price__original--onsale {
+  text-decoration: line-through;
+  color: #888; 
+  margin-right: 6px;
+  font-size: 0.9em; 
+}
+
+.price__sale {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.price__original {
+  font-weight: bold;
+}
+
 .link__breadcrumbs {
   color:#bfbfbf;
   margin-bottom:16px

@@ -58,7 +58,8 @@ const MovieDetails = ({ cart = [], addToCart }) => {
           </div>
           <Ratings rating={movie.rating} />
           <div className="movie__price">
-            <Price originalPrice={movie.originalPrice} salePrice={movie.salePrice} />
+            <Price className="price__original--onsale price__original" originalPrice={movie.originalPrice} />
+            <Price className="price__sale" salePrice={movie.salePrice} />
           </div>
           {movieExistsOnCart() ? (
             <Link to={`/cart`} className="movie__link">

@@ -38,7 +38,7 @@ export function useMovies(searchTerm) {
               year: Number(item.Year) || 0,
               rating: Math.floor(Math.random() * 5) + 1,
               originalPrice: original,
-              salePrice: onSale ? Math.max(1, original - Math.floor(Math.random() * 5)) : original,
+              salePrice: onSale ? Math.max(1, original - 3) : null,
             };
           });
           setMovies(mapped);
