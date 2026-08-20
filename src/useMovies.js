@@ -27,15 +27,20 @@ export function useMovies(searchTerm) {
           setError(data.Error);
           setMovies([]);
         } else {
-          const mapped = data.Search.map((item) => ({
-            id: item.imdbID,
-            url: item.Poster !== 'N/A' ? item.Poster : null,
-            title: item.Title,
-            year: Number(item.Year) || 0,
-            rating: 5,
-            originalPrice: 15,
-            salePrice: 10,
-          }));
+
+          const mapped = data.Search.map((item) => {
+            const original = Math.floor(Math.random() * 15) + 5; // 5–20
+            const onSale = Math.random() > 0.5;
+            return {
+              id: item.imdbID,
+              url: item.Poster !== 'N/A' ? item.Poster : null,
+              title: item.Title,
+              year: Number(item.Year) || 0,
+              rating: Math.floor(Math.random() * 5) + 1,
+              originalPrice: original,
+              salePrice: onSale ? Math.max(1, original - Math.floor(Math.random() * 5)) : original,
+            };
+          });
           setMovies(mapped);
         }
       } catch (err) {
