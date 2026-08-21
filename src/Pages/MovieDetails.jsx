@@ -41,12 +41,12 @@ const MovieDetails = ({ cart = [], addToCart }) => {
 
   return (
     <main className="container__movie--selected">
-      <div className="book__selected">
+      <div className="movie__selected">
         <figure className="movie__selected--figure">
           <img className="movie__selected--img" src={movie.url} alt={movie.title} />
         </figure>
         <div className="movie__selected--description">
-          <div className="book__selected--top">
+          <div className="movie__selected--top">
             <Link to="/" className="movie__selected--link">
               <FontAwesomeIcon icon="arrow-left" /> Back
             </Link>
@@ -58,8 +58,7 @@ const MovieDetails = ({ cart = [], addToCart }) => {
           </div>
           <Ratings rating={movie.rating} />
           <div className="movie__price">
-            <Price className="price__original--onsale price__original" originalPrice={movie.originalPrice} />
-            <Price className="price__sale" salePrice={movie.salePrice} />
+            <Price className="price__original--onsale price__original" originalPrice={movie.originalPrice} salePrice={movie.salePrice} />
           </div>
           {movieExistsOnCart() ? (
             <Link to={`/cart`} className="movie__link">

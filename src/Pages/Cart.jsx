@@ -61,7 +61,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) =>
                     <div className="cart__movie--info">
                       <span className="cart__movie--title">{movie.title}</span>
                       <span className="cart__movie--price">${((movie.salePrice || movie.originalPrice) * (movie.quantity || 1)).toFixed(2)}</span>
-                      <button className="cart__book--remove" onClick={() => removeItem(movie)}>Remove</button>
+                      <button className="cart__movie--remove" onClick={() => removeItem(movie)}>Remove</button>
                     </div>
                   </div>
                   <div className="cart__quantity">
