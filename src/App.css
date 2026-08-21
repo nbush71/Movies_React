@@ -65,12 +65,12 @@ nav {
     width:100%
   }
   .highlight:not(:last-child) {
-    margin-bottom:24px
+    margin-bottom:24px;
   }
-  .cart__book--img {
+  .cart__movie--img {
     display:none
   }
-  .cart__book--info {
+  .cart__movie--info {
     padding-left:0
   }
 }
@@ -380,7 +380,7 @@ header {
   transition:all .3s ease;
   width:25%
 }
-.book:hover {
+.movie:hover {
   transform:translateY(-4px)
 }
 .movie__img {
@@ -535,7 +535,7 @@ select {
     transform:rotate(1turn)
   }
 }
-.container__book--selected {
+.container__movie--selected {
   padding-top:16px
 }
 .movie__selected {
@@ -641,7 +641,7 @@ input {
 .cart__title {
   margin-bottom:16px
 }
-.cart__book {
+.cart__movie {
   display:flex;
   width:60%;
 }
